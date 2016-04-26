@@ -17,6 +17,7 @@ sudo apt-get upgrade
 sudo apt-get install python-setuptools
 sudo easy_install pip (or sudo apt-get install python-pip)
 sudo pip install twython
+
 Registering a Twitter app
 In order to use the Twitter API – that is, the REST interface that we’ll use to post new Tweets and generally interact with Twitter outisde of the twitter website – we’ll need to register a new app. Do that from this link – you needn’t specify a callback URL, and just make up a website if you want.
 
@@ -29,7 +30,8 @@ sudo crontab -e
 Paste in this line, to start at reboot. The script has a 5-mins loop internally to check and retweet. 
 
 @reboot sudo python /home/pi/ReTweetBot.py & >>/dev/null
-Change that to * * * * * if you want it to run every minute, and be prepared to lose followers faster than a Twitter account that loses followers quickly.
 
-I will be extending the code to multiple users,etc. Its quite simple. 
+Note: If you see TLS/SSL errors even though the script works flawlessly, its due to the python version and will be resolved once you upgrade. They have no impact on the functionality and should not be suppressed as some forum have advised.
+
+P.S.: I will be extending the code to multiple users,etc. Its quite simple. 
 Happy Coding...
